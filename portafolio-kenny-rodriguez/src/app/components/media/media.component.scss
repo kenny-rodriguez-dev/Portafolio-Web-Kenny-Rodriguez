@@ -1,0 +1,20 @@
+.media-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.media-links {
+  display: flex;
+  gap: 8px;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="extra-container">
+  <h2 class="section-title">Extra</h2>
+  
+  <!-- Mobile View -->
+  <div class="extra-mobile">
+    <app-card-detail 
+      *ngFor="let extra of extras" 
+      [extra]="extra">
+    </app-card-detail>
+  </div>
+  
+  <!-- Desktop/Tablet View -->
+  <div class="extra-grid">
+    <app-card-detail 
+      *ngFor="let extra of extras" 
+      [extra]="extra">
+    </app-card-detail>
+  </div>
+</div>

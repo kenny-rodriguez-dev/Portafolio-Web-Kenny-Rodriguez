@@ -1,0 +1,25 @@
+<div class="media-container">
+  <app-icon-button
+    icon="mail"
+    [url]="'mailto:' + media.email"
+    [text]="media.email"
+    [solid]="true">
+  </app-icon-button>
+  
+  <div class="media-links">
+    <app-icon-button
+      icon="file-text"
+      [url]="media.cv">
+    </app-icon-button>
+    
+    <app-icon-button
+      icon="github"
+      [url]="media.github">
+    </app-icon-button>
+    
+    <app-icon-button
+      icon="linkedin"
+      [url]="media.likedin">
+    </app-icon-button>
+  </div>
+</div>

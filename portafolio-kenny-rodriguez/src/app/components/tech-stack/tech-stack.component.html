@@ -1,0 +1,44 @@
+<div class="tech-stack-container">
+  <h2 class="section-title">Tecnologías</h2>
+  
+  <div class="tech-categories">
+    <!-- Frontend -->
+    <div class="tech-category">
+      <h3 class="category-title">Frontend</h3>
+      <div class="tech-grid">
+        <div *ngFor="let tech of getFrontendTech()" class="tech-item">
+          <div class="tech-icon-wrapper">
+            <i [class]="tech.icon"></i>
+          </div>
+          <span class="tech-name">{{ tech.name }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="tech-category">
+      <h3 class="category-title">Backend</h3>
+      <div class="tech-grid">
+        <div *ngFor="let tech of getBackendTech()" class="tech-item">
+          <div class="tech-icon-wrapper">
+            <i [class]="tech.icon"></i>
+          </div>
+          <span class="tech-name">{{ tech.name }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DevOps & Tools -->
+    <div class="tech-category">
+      <h3 class="category-title">DevOps & Tools</h3>
+      <div class="tech-grid">
+        <div *ngFor="let tech of getToolsTech()" class="tech-item">
+          <div class="tech-icon-wrapper">
+            <i [class]="tech.icon"></i>
+          </div>
+          <span class="tech-name">{{ tech.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

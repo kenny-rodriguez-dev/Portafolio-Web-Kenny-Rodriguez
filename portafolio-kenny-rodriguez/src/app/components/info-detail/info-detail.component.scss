@@ -1,0 +1,272 @@
+.info-detail-container {
+  background: rgba(10, 20, 40, 0.3);
+  border: 1px solid rgba(50, 150, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    background: rgba(20, 40, 80, 0.4);
+    border-color: rgba(50, 150, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30, 100, 200, 0.3);
+  }
+
+  // Fondos más transparentes para móviles
+  @media (max-width: 768px) {
+    background: rgba(15, 25, 45, 0.3);
+    border: 1px solid rgba(50, 150, 255, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(30, 100, 200, 0.2);
+
+    &:hover {
+      background: rgba(25, 40, 70, 0.4);
+      border-color: rgba(100, 180, 255, 0.6);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(30, 100, 200, 0.4);
+    }
+  }
+}
+
+.info-content {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    padding: 14px;
+    gap: 12px;
+  }
+}
+
+.info-main {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.info-title {
+  color: rgba(200, 220, 255, 0.95);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+
+  // Mejor contraste en móviles
+  @media (max-width: 768px) {
+    color: rgba(220, 235, 255, 0.98);
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+.info-subtitle {
+  color: rgba(100, 180, 255, 0.8);
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+
+  // Mejor contraste en móviles
+  @media (max-width: 768px) {
+    color: rgba(120, 190, 255, 0.95);
+    font-weight: 700;
+  }
+}
+
+.info-description {
+  color: rgba(180, 200, 240, 0.9);
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0;
+
+  // Mejor contraste en móviles
+  @media (max-width: 768px) {
+    color: rgba(200, 215, 245, 0.95);
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(30, 100, 200, 0.2);
+  border: 1px solid rgba(50, 150, 255, 0.3);
+  border-radius: 6px;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+
+  i {
+    font-size: 18px;
+    color: rgba(100, 180, 255, 0.9);
+
+    // Mejor contraste en móviles
+    @media (max-width: 768px) {
+      color: rgba(120, 190, 255, 1);
+    }
+  }
+
+  span {
+    font-size: 12px;
+    color: rgba(200, 220, 255, 0.9);
+    font-weight: 500;
+
+    // Mejor contraste en móviles
+    @media (max-width: 768px) {
+      color: rgba(220, 235, 255, 0.98);
+      font-weight: 600;
+    }
+  }
+
+  &:hover {
+    background: rgba(50, 150, 255, 0.3);
+    transform: translateY(-1px);
+  }
+
+  // Fondos más transparentes para móviles
+  @media (max-width: 768px) {
+    background: rgba(40, 110, 210, 0.25);
+    border: 1px solid rgba(70, 160, 255, 0.5);
+
+    &:hover {
+      background: rgba(60, 140, 230, 0.35);
+    }
+  }
+}
+
+.info-actions {
+  display: flex;
+  gap: 8px;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+}
+
+.info-image {
+  &.clickable {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23FF6B35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>'), pointer !important;
+  }
+
+  width: auto;
+  height: 200px;
+  // CORRECCIÓN: Asegurar dimensiones consistentes para todas las imágenes
+  min-width: 200px;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid rgba(50, 150, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(30, 100, 200, 0.3);
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1.02) translateY(-4px);
+    border-color: rgba(100, 180, 255, 0.6);
+    box-shadow: 0 12px 35px rgba(30, 100, 200, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 180px;
+    min-width: unset;
+    max-width: 100%;
+    // Mejor contraste de bordes en móviles
+    border: 2px solid rgba(70, 160, 255, 0.5);
+    box-shadow: 0 6px 20px rgba(30, 100, 200, 0.4);
+
+    &:hover {
+      border-color: rgba(120, 190, 255, 0.8);
+      box-shadow: 0 8px 25px rgba(30, 100, 200, 0.6);
+    }
+  }
+}
+
+.info-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap; // Allow wrapping if space is tight
+    justify-content: flex-end; // Align like desktop by default or center?
+    // Actually, user liked Experience which is maybe just one item.
+    // Let's try gap-based and remove space-between forcing properties.
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
+
+.date-badge {
+  padding: 6px 12px;
+  background: rgba(30, 100, 200, 0.2);
+  border: 1px solid rgba(50, 150, 255, 0.4);
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+  color: rgba(200, 220, 255, 0.9);
+  font-size: 13px; // Match button size
+  text-align: center; // Ensure centered text
+
+  // Fondos más transparentes para móviles
+  @media (max-width: 768px) {
+    background: rgba(40, 110, 210, 0.3);
+    border: 1px solid rgba(70, 160, 255, 0.6);
+    color: rgba(220, 235, 255, 0.98);
+    font-weight: 600; // Match button weight
+    font-size: 12px; // Match button mobile size
+    padding: 6px 10px; // Match button mobile padding
+  }
+}
+
+.location-badge {
+  padding: 6px 12px;
+  background: rgba(30, 100, 200, 0.2);
+  border: 1px solid rgba(50, 150, 255, 0.4);
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+  color: rgba(200, 220, 255, 0.9);
+  font-size: 13px; // Match button size
+  text-align: center; // Ensure centered text
+
+  // Fondos más transparentes para móviles
+  @media (max-width: 768px) {
+    background: rgba(40, 110, 210, 0.3);
+    border: 1px solid rgba(70, 160, 255, 0.6);
+    color: rgba(220, 235, 255, 0.98);
+    font-weight: 600; // Match button weight
+    font-size: 12px; // Match button mobile size
+    padding: 6px 10px; // Match button mobile padding
+  }
+}

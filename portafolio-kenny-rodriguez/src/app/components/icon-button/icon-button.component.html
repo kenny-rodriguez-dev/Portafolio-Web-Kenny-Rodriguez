@@ -1,0 +1,14 @@
+<div *ngIf="!url || url === '#' || disableLink; else linkButton" [class.solid]="solid" [class.surface]="!solid"
+  class="icon-button disabled-button">
+  <lucide-icon [img]="iconComponent" size="16" class="button-icon"></lucide-icon>
+  <span *ngIf="text" class="button-text">{{ text }}</span>
+</div>
+
+<ng-template #linkButton>
+  <a [href]="url" target="_blank" rel="noopener noreferrer" class="icon-button-link">
+    <button [class.solid]="solid" [class.surface]="!solid" class="icon-button">
+      <lucide-icon [img]="iconComponent" size="16" class="button-icon"></lucide-icon>
+      <span *ngIf="text" class="button-text">{{ text }}</span>
+    </button>
+  </a>
+</ng-template>

@@ -1,0 +1,32 @@
+<div class="info-detail-container">
+  <div class="info-content">
+    <div class="info-main">
+      <app-icon-badge [icon]="info.icon"></app-icon-badge>
+      <div class="info-text">
+        <h3 class="info-title">{{ info.title }}</h3>
+        <h4 class="info-subtitle">{{ info.subtitle }}</h4>
+        <p class="info-description">{{ info.description }}</p>
+        <div *ngIf="info.technologies && info.technologies.length > 0" class="technologies">
+          <div *ngFor="let tech of info.technologies" class="tech-badge">
+            <i [class]="tech.icon"></i>
+            <span>{{ tech.name }}</span>
+          </div>
+        </div>
+        <div class="info-actions">
+          <app-icon-button *ngIf="info.url" icon="link" [url]="info.url">
+          </app-icon-button>
+          <app-icon-button *ngIf="info.github" icon="github" [url]="info.github">
+          </app-icon-button>
+        </div>
+      </div>
+    </div>
+    <img *ngIf="info.image" [src]="info.image" [alt]="info.title" class="info-image clickable interactive"
+      (click)="onImageClick()">
+    <div class="info-meta">
+      <span *ngIf="info.date" class="date-badge">{{ info.date }}</span>
+      <span *ngIf="info.location" class="location-badge">{{ info.location }}</span>
+      <app-icon-button *ngIf="info.certificate" icon="shield-check" [solid]="true"
+        [url]="info.certificate"></app-icon-button>
+    </div>
+  </div>
+</div>

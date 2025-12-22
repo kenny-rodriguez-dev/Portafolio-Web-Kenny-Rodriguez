@@ -1,0 +1,18 @@
+<div class="header-container">
+  <div class="avatar-wrapper">
+    <div class="avatar-glow"></div>
+    <img [src]="data.avatar" [alt]="data.name" class="avatar">
+  </div>
+  
+  <div class="info-container">
+    <h1 class="name">{{ data.name }}</h1>
+    <h2 class="skill">{{ data.skill }}</h2>
+    
+    <div class="location">
+      <lucide-icon [img]="MapPin" size="18" class="location-icon"></lucide-icon>
+      <span>{{ data.location }}</span>
+    </div>
+    
+    <app-media [media]="data.media"></app-media>
+  </div>
+</div>

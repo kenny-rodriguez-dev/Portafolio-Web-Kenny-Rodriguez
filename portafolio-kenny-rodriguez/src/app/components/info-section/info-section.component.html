@@ -1,0 +1,9 @@
+<div class="info-section-container">
+  <h2 class="section-title">{{ title }}</h2>
+  <div class="info-items">
+    <app-info-detail 
+      *ngFor="let item of items" 
+      [info]="item">
+    </app-info-detail>
+  </div>
+</div>

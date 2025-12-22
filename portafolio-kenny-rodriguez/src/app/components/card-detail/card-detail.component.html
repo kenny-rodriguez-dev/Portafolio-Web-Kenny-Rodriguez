@@ -1,0 +1,10 @@
+<div class="card-container" (click)="openUrl()">
+  <div class="card-image-wrapper">
+    <img [src]="extra.image" [alt]="extra.title" class="card-image">
+    <div class="card-overlay"></div>
+  </div>
+  <div class="card-content">
+    <h3 class="card-title">{{ extra.title }}</h3>
+    <p class="card-description">{{ extra.description }}</p>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+.icon-button-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.icon-button,
+.disabled-button {
+  display: flex;
+  align-items: center;
+  gap: 6px; // Reduced gap
+  padding: 6px 12px; // Reduced padding (thinner)
+  border-radius: 6px; // Slightly smaller radius
+  font-weight: 500; // Slightly lighter weight
+  font-size: 13px; // Smaller font
+  transition: all 0.3s ease;
+  border: 1px solid rgba(50, 150, 255, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(30, 100, 200, 0.15); // Lighter shadow
+
+  &.solid {
+    background: linear-gradient(135deg, rgba(30, 100, 200, 0.6), rgba(50, 150, 255, 0.4));
+    color: white;
+
+    &:hover:not(.disabled-button) {
+      background: linear-gradient(135deg, rgba(50, 150, 255, 0.8), rgba(100, 180, 255, 0.6));
+      border-color: rgba(100, 180, 255, 0.6);
+      box-shadow: 0 4px 15px rgba(30, 100, 200, 0.3);
+      transform: translateY(-1px) scale(1.01);
+    }
+  }
+
+  &.surface {
+    background: rgba(30, 100, 200, 0.1); // Slightly more transparent
+    color: rgba(200, 220, 255, 0.9);
+
+    &:hover:not(.disabled-button) {
+      background: rgba(50, 150, 255, 0.2);
+      border-color: rgba(100, 180, 255, 0.6);
+      box-shadow: 0 4px 15px rgba(30, 100, 200, 0.3);
+      transform: translateY(-1px) scale(1.01);
+    }
+
+    // Mejor contraste en móviles
+    @media (max-width: 768px) {
+      background: rgba(40, 110, 210, 0.2);
+      color: rgba(220, 235, 255, 0.98);
+      border-color: rgba(70, 160, 255, 0.4);
+
+      &:hover:not(.disabled-button) {
+        background: rgba(60, 140, 230, 0.3);
+        border-color: rgba(120, 190, 255, 0.6);
+      }
+    }
+  }
+
+  &:active:not(.disabled-button) {
+    transform: translateY(0px) scale(0.98);
+  }
+
+  @media (max-width: 768px) {
+    padding: 6px 10px; // Even smaller on mobile
+    font-size: 12px;
+  }
+}
+
+// Estilos específicos para botones deshabilitados (certificados)
+.disabled-button {
+  // CAMBIO: Cursor de terminal para certificados
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2387CEEB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>'), text !important;
+  opacity: 0.8;
+
+  &.solid {
+    background: linear-gradient(135deg, rgba(30, 100, 200, 0.4), rgba(50, 150, 255, 0.2));
+    border-color: rgba(50, 150, 255, 0.3);
+
+    &:hover {
+      background: linear-gradient(135deg, rgba(30, 100, 200, 0.4), rgba(50, 150, 255, 0.2));
+      border-color: rgba(50, 150, 255, 0.3);
+      transform: none;
+      box-shadow: 0 4px 15px rgba(30, 100, 200, 0.2);
+    }
+
+    // Mejores colores para móviles
+    @media (max-width: 768px) {
+      background: linear-gradient(135deg, rgba(40, 110, 210, 0.5), rgba(70, 160, 255, 0.3));
+      border-color: rgba(70, 160, 255, 0.4);
+
+      &:hover {
+        background: linear-gradient(135deg, rgba(40, 110, 210, 0.5), rgba(70, 160, 255, 0.3));
+        border-color: rgba(70, 160, 255, 0.4);
+      }
+    }
+  }
+
+  // En móviles usar cursor por defecto
+  @media (max-width: 768px) {
+    cursor: default !important;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    cursor: default !important;
+  }
+}
+
+.button-icon {
+  color: currentColor;
+}
+
+.button-text {
+  // Removed display: none for mobile to ensure text is always visible
+  // Can add specific mobile styles here if needed
+  white-space: nowrap;
+}
