@@ -227,7 +227,7 @@ export class PortfolioDataService {
         icon: "monitor-play",
         title: "Reserva a visitantes",
         subtitle: "Aplicación web de gestión de visitas",
-        description: "Diseñé e implementé un sistema de agendamiento de citas para la Universidad Estatal de Milagro (UNEMI). La plataforma funciona como un prototipo intuitivo que permite a los estudiantes reservar eficientemente reuniones con docentes o personal administrativo, simplificando la coordinación y optimizando la gestión de tiempo para ambas partes.",
+        description: "Diseñé e implementé un sistema de agendamiento de citas con integración IoT (ESP32-CAM) para la Universidad Estatal de Milagro (UNEMI). La plataforma funciona como un prototipo intuitivo que permite a los estudiantes reservar, eficientemente, reuniones con docentes o personal administrativo, simplificando la coordinación y optimizando la gestión del tiempo para ambas partes.",
         technologies: [
           {
             icon: "devicon-django-plain",
